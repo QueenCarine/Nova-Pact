@@ -74,6 +74,9 @@ export default function Challenges() {
 
   return (
     <section id="challenges" className="py-10 relative">
+    <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-500 mb-6">
+  Challenges
+</h2>
       <div className="relative mx-auto max-w-6xl px-6">
 
         {/* Left Button */}
