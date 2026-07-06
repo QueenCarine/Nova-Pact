@@ -19,8 +19,7 @@ const team = [
   {
     name: "Gihozo Emeline",
     role: "Coordinator",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    image:"/team/gihozo.jpg",
   },
   {
     name: "Queen Carine",
