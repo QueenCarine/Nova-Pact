@@ -14,8 +14,7 @@ const team = [
   {
     name: "Mukunzi Ruyumbu Dickson ",
     role: "Creative Director",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+    image:"/team/mukunzi.jpg",
   },
   {
     name: "Gihozo Emeline",
