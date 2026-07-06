@@ -73,17 +73,16 @@ export default function Challenges() {
   };
 
   return (
-    <section id="challenges" className="py-10 relative">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-500 mb-6">
+    <section id="challenges" className="relative py-10">
+      <h2 className="mb-6 text-center text-2xl font-bold text-blue-500 md:text-3xl">
         Challenges
       </h2>
 
       <div className="relative mx-auto max-w-6xl px-6">
-
         {/* Left Button */}
         <button
           onClick={() => scroll("left")}
-          className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-md hover:bg-gray-100"
+          className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-md transition hover:bg-gray-100"
         >
           <ChevronLeft size={20} className="text-blue-500" />
         </button>
@@ -93,7 +92,7 @@ export default function Challenges() {
           ref={scrollRef}
           className="flex gap-4 overflow-x-auto scroll-smooth px-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
-          {cities.map((city) => (
+          {cities.map((city, index) => (
             <div
               key={city.name}
               className="group relative h-64 w-56 flex-shrink-0 overflow-hidden rounded-lg"
@@ -103,34 +102,36 @@ export default function Challenges() {
                 src={city.image}
                 alt={city.name}
                 fill
-                sizes="(max-width: 768px) 50vw, 224px"
+                priority={index === 0}
+                quality={75}
+                sizes="(max-width: 640px) 80vw, (max-width: 1024px) 224px, 224px"
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
 
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition pointer-events-none" />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              {/* Hover content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 px-3 transition pointer-events-none group-hover:pointer-events-auto z-10">
-                <p className="text-white text-lg font-semibold mb-2">
+              {/* Hover Content */}
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <h3 className="mb-2 text-lg font-semibold text-white">
                   {city.name}
-                </p>
+                </h3>
 
-                <p className="text-white text-sm mb-4">
+                <p className="mb-4 text-sm text-white">
                   {city.description}
                 </p>
 
                 <button
                   onClick={() => setSelectedVideo(city.video)}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-200 hover:scale-105 flex items-center gap-2"
+                  className="flex items-center gap-2 rounded-full bg-blue-500 px-5 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-blue-600"
                 >
                   <Play size={14} />
                   {city.cta}
                 </button>
               </div>
 
-              {/* Bottom label */}
-              <div className="absolute bottom-4 left-4 group-hover:opacity-0 transition-opacity">
+              {/* Bottom Label */}
+              <div className="absolute bottom-4 left-4 transition-opacity duration-300 group-hover:opacity-0">
                 <span className="text-base font-semibold text-white">
                   {city.name}
                 </span>
@@ -142,30 +143,32 @@ export default function Challenges() {
         {/* Right Button */}
         <button
           onClick={() => scroll("right")}
-          className="absolute -right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-md hover:bg-gray-100"
+          className="absolute -right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-md transition hover:bg-gray-100"
         >
           <ChevronRight size={20} className="text-blue-500" />
         </button>
       </div>
 
-      {/* VIDEO MODAL */}
+      {/* Video Modal */}
       {selectedVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <div className="relative w-[90%] max-w-3xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+          <div className="relative w-full max-w-4xl">
             <button
               onClick={() => setSelectedVideo(null)}
-              className="absolute -top-10 right-0 text-white"
+              className="absolute -top-12 right-0 text-white transition hover:text-gray-300"
             >
-              <X size={28} />
+              <X size={30} />
             </button>
 
-            <iframe
-              key={selectedVideo}
-              src={selectedVideo}
-              className="w-full h-[400px] rounded-lg"
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-              allowFullScreen
-            />
+            <div className="relative aspect-video overflow-hidden rounded-lg">
+              <iframe
+                key={selectedVideo}
+                src={selectedVideo}
+                className="absolute inset-0 h-full w-full"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       )}
