@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[550px] items-center overflow-hidden bg-black"
+      className="relative flex min-h-[600px] items-center overflow-hidden bg-black"
     >
       {/* Background Image */}
       <Image
