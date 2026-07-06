@@ -74,9 +74,10 @@ export default function Challenges() {
 
   return (
     <section id="challenges" className="py-10 relative">
-    <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-500 mb-6">
-  Challenges
-</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-500 mb-6">
+        Challenges
+      </h2>
+
       <div className="relative mx-auto max-w-6xl px-6">
 
         {/* Left Button */}
@@ -102,6 +103,7 @@ export default function Challenges() {
                 src={city.image}
                 alt={city.name}
                 fill
+                sizes="(max-width: 768px) 50vw, 224px"
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
 
@@ -110,7 +112,6 @@ export default function Challenges() {
 
               {/* Hover content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 px-3 transition pointer-events-none group-hover:pointer-events-auto z-10">
-
                 <p className="text-white text-lg font-semibold mb-2">
                   {city.name}
                 </p>
@@ -119,7 +120,6 @@ export default function Challenges() {
                   {city.description}
                 </p>
 
-                {/* CTA Button */}
                 <button
                   onClick={() => setSelectedVideo(city.video)}
                   className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-200 hover:scale-105 flex items-center gap-2"
@@ -152,8 +152,6 @@ export default function Challenges() {
       {selectedVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
           <div className="relative w-[90%] max-w-3xl">
-
-            {/* Close */}
             <button
               onClick={() => setSelectedVideo(null)}
               className="absolute -top-10 right-0 text-white"
