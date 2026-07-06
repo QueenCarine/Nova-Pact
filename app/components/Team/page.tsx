@@ -30,8 +30,7 @@ const team = [
   {
     name: "Zima Yann",
     role: "Operations",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
+    image:"/team/yann.jpg",
   },
 ];
 
