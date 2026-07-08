@@ -9,7 +9,7 @@ const team = [
   {
     name: "ZamZam Sarah Uwonkunda",
     role: "Vice President",
-    image:"/team/queen.jpg",
+    image:"/team/zamzam.jpg",
   },
   {
     name: "Mukunzi Ruyumbu Dickson",
