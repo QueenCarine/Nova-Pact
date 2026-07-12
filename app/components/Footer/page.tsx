@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-blue-400">
-      <div className="max-w-6xl mx-auto px-6 py-10 font-sans flex flex-col md:flex-row justify-between gap-10">
+      <div className="max-w-6xl mx-auto px-6 py-10 font-sans flex flex-col md:flex-row justify-between gap-10 md:translate-x-35">
 
         {/* Left */}
         <div className="w-full md:w-1/2 text-center md:text-left">
