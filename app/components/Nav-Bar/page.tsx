@@ -17,7 +17,7 @@ export default function Navbar() {
   useEffect(() => {
     const sections = navLinks
       .map((link) => document.querySelector(link.href))
-      .filter(Boolean);
+      .filter((section): section is Element => section !== null);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -91,6 +91,7 @@ export default function Navbar() {
         <button
           className="text-blue-500 lg:hidden"
           onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
