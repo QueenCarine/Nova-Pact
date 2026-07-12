@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { MapPin, Mail } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 
@@ -10,6 +13,16 @@ export default function Footer() {
 
         {/* Left */}
         <div className="w-full md:w-1/2 text-center md:text-left">
+
+          {/* Logo */}
+          <Image
+            src="/story/bill.jpg"
+            alt="NovaPact Logo"
+            width={80}
+            height={80}
+            className="mb-3 mx-auto md:mx-0"
+          />
+
           <h1 className="font-bold text-white text-2xl md:text-[28px]">
             NovaPact
           </h1>
@@ -27,7 +40,6 @@ export default function Footer() {
             Get in touch
           </h1>
 
-          {/* Location */}
           <a
             href="https://www.google.com/maps/search/ALU+Rwanda+campus"
             target="_blank"
@@ -38,7 +50,6 @@ export default function Footer() {
             <span>ALU, Rwanda</span>
           </a>
 
-          {/* Email */}
           <a
             href="mailto:novapact@gmail.com"
             className="flex items-center justify-center md:justify-start mb-3 space-x-2 text-white text-base md:text-lg"
@@ -47,7 +58,6 @@ export default function Footer() {
             <span>novapact@gmail.com</span>
           </a>
 
-          {/* Instagram */}
           <a
             href="https://instagram.com/___thenovapact.6"
             target="_blank"
@@ -61,10 +71,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Divider */}
       <hr className="border-white/40 mx-4" />
 
-      {/* Bottom */}
       <div className="text-center py-4 text-white text-sm md:text-base">
         © {currentYear} Copyright All Rights Reserved.
       </div>

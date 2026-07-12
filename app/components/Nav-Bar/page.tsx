@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -59,13 +60,23 @@ export default function Navbar() {
     <header className="sticky top-0 z-30 w-full bg-white/90 backdrop-blur-md border-b border-blue-100">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-        {/* Logo */}
+        {/* Logo + Brand */}
         <a
           href="#home"
           onClick={() => setActive("#home")}
-          className="text-2xl font-bold tracking-wide"
+          className="flex items-center gap-2 text-2xl font-bold tracking-wide"
         >
-          <span className="text-blue-500">NovaPact</span>
+          <Image
+            src="/story/bill.jpg"
+            alt="NovaPact Logo"
+            width={45}
+            height={45}
+            className="object-contain"
+          />
+
+          <span className="text-blue-500">
+            NovaPact
+          </span>
         </a>
 
         {/* Desktop Navigation */}
