@@ -13,8 +13,8 @@ export default function Home() {
       <Hero/>
       <OurStory/>
       <Services/>
-      <Team/>
       <Challenges/>
+      <Team/>
       <Footer/>
 
       {/* <section id="home" className="h-screen p-10">

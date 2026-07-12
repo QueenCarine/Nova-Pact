@@ -7,12 +7,12 @@ const team = [
     image:"/team/mukunzi.jpg",
   },
   {
-    name: "ZamZam Sarah Uwonkunda",
+    name: "ZamZam Sarah",
     role: "Vice President",
     image:"/team/zamzam.jpg",
   },
   {
-    name: "Mukunzi Ruyumbu Dickson",
+    name: "Mukunzi Dickson",
     role: "Creative Director",
     image: "/team/mukunzi.jpg",
   },
@@ -35,10 +35,10 @@ const team = [
 
 export default function Team() {
   return (
-    <section id="team" className="bg-blue-400 py-16">
+    <section id="team" className="bg-white py-16">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <h2 className="text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="text-2xl font-bold text-blue-500 sm:text-3xl">
             The Team Behind It
           </h2>
         </div>
@@ -56,11 +56,11 @@ export default function Team() {
                 />
               </div>
 
-              <h3 className="text-base font-semibold text-white">
+              <h3 className="text-base font-semibold text-blue-500">
                 {person.name}
               </h3>
 
-              <p className="text-xs uppercase tracking-wide text-white/70">
+              <p className="text-xs uppercase tracking-wide text-blue-500">
                 {person.role}
               </p>
             </div>
