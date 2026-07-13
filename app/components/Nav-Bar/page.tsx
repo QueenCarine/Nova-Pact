@@ -69,8 +69,8 @@ export default function Navbar() {
           <Image
             src="/home/novapact.png"
             alt="NovaPact Logo"
-            width={95}
-            height={95}
+            width={75}
+            height={75}
             className="rounded-4xl object-cover"
           />
 
