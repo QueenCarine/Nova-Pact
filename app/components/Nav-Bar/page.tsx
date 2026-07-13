@@ -69,9 +69,9 @@ export default function Navbar() {
           <Image
             src="/story/bill.jpg"
             alt="NovaPact Logo"
-            width={45}
-            height={45}
-            className="object-contain"
+            width={95}
+            height={95}
+            className="rounded-4xl object-cover"
           />
 
           <span className="text-blue-500">
