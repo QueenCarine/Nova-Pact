@@ -4,7 +4,7 @@ const team = [
   {
     name: "Felicien Mukamarakiza",
     role: "President",
-    image:"/team/mukunzi.jpg",
+    image:"/team/felis.png",
   },
   {
     name: "ZamZam Sarah",
