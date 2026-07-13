@@ -67,7 +67,7 @@ export default function Navbar() {
           className="flex items-center gap-2 text-2xl font-bold tracking-wide"
         >
           <Image
-            src="/story/bill.jpg"
+            src="/home/novapact.png"
             alt="NovaPact Logo"
             width={95}
             height={95}
