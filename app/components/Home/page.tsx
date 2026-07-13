@@ -4,20 +4,22 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[600px] items-center overflow-hidden bg-black"
+      className="relative flex min-h-[600px] items-center bg-black px-6 py-6"
     >
-      {/* Background Image */}
-      <Image
-        src="/home/home.jpg"
-        alt="NovaPact Hero"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      {/* Rounded Image Container */}
+      <div className="absolute inset-6 overflow-hidden rounded-3xl">
+        <Image
+          src="/home/home.jpg"
+          alt="NovaPact Hero"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
