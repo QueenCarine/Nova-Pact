@@ -22,7 +22,7 @@ export default function Services() {
   return (
     <section>
       <div className="mx-auto max-w-7xl px-6 py-3 text-center">
-        <p className="text-3xl font-black uppercase leading-none tracking-tight sm:text-4xl text-blue-500">
+        <p className="text-3xl leading-none tracking-tight sm:text-4xl text-blue-500">
           The Challenge We Address
         </p>
       </div>
