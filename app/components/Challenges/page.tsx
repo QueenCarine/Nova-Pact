@@ -42,7 +42,7 @@ const chapters = [
     number: "05",
     name: "Launch Your Mission",
     image: "/home/home.jpg",
-    video: "https://www.youtube.com/embed/NI11jyLTpmo?autoplay=1",
+    video: "https://www.youtube.com/embed/dBNgomju8SQ?autoplay=1",
     description: "Pitch stage where we define our mission and present our solution.",
     tag: "Pitch",
   },

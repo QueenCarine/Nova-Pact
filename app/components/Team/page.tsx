@@ -19,11 +19,11 @@ const team = [
   {
     name: "Gihozo Emeline",
     role: "Coordinator",
-    image: "/team/gihozo.jpg",
+    image: "/team/emeline.jpg",
   },
   {
     name: "Queen Carine",
-    role: "Engineering Lead",
+    role: "Time Keeper",
     image: "/team/queen.jpg",
   },
   {

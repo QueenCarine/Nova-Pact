@@ -13,14 +13,14 @@ export default function Footer() {
 
         {/* Left */}
         <div className="w-full md:w-1/2 text-center md:text-left">
+        
 
-          {/* Logo */}
           <Image
-            src="/story/bill.jpg"
+            src="/home/novapact.png"
             alt="NovaPact Logo"
-            width={80}
-            height={80}
-            className="mb-3 mx-auto md:mx-0"
+            width={35}
+            height={35}
+            className="rounded-full object-cover"
           />
 
           <h1 className="font-bold text-white text-2xl md:text-[28px]">
