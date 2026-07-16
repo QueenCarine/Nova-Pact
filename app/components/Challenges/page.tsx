@@ -8,7 +8,7 @@ const chapters = [
   {
     number: "01",
     name: "Introduction",
-    image: "/home/home.jpg",
+    image: "/challenges/introduction.jpg",
     video: "https://www.youtube.com/embed/4WreVjPbFw8?autoplay=1",
     description:
       "Elevator pitch video where we introduce our team, interests, roles, and goals for E-LAB while presenting who we are and what we bring to the Think Tank.",
@@ -17,7 +17,7 @@ const chapters = [
   {
     number: "02",
     name: "Discover Africa",
-    image: "/home/home.jpg",
+    image: "/challenges/himba.jpg",
     video: "https://www.youtube.com/embed/LaEOEfh0hNc?autoplay=1",
     description: "Storytelling exercise where we explore and present a community's story.",
     tag: "Storytelling",
@@ -25,7 +25,7 @@ const chapters = [
   {
     number: "03",
     name: "HELP-LAB",
-    image: "/home/home.jpg",
+    image: "/challenges/help.jpg",
     video: "https://www.youtube.com/embed/NI11jyLTpmo?autoplay=1",
     description: "Video reflection of our community engagement experience.",
     tag: "Reflection",
@@ -33,7 +33,7 @@ const chapters = [
   {
     number: "04",
     name: "Hunt for Treasure",
-    image: "/home/home.jpg",
+    image: "/challenges/map.jpg",
     video: "https://www.youtube.com/embed/vrN6yqVzAq4?autoplay=1",
     description: "Interview-based challenge where we learn from an entrepreneur's journey.",
     tag: "Interview",
@@ -41,7 +41,7 @@ const chapters = [
   {
     number: "05",
     name: "Launch Your Mission",
-    image: "/home/home.jpg",
+    image: "/challenges/launch.jpg",
     video: "https://www.youtube.com/embed/dBNgomju8SQ?autoplay=1",
     description: "Pitch stage where we define our mission and present our solution.",
     tag: "Pitch",
@@ -66,7 +66,7 @@ export default function Challenges() {
           </p>
         </div>
 
-        {/* Chapter rows */}
+       
         <div className="flex flex-col gap-12 sm:gap-16">
           {chapters.map((chapter, index) => {
             const reversed = index % 2 === 1;
@@ -77,7 +77,7 @@ export default function Challenges() {
                   reversed ? "md:flex-row-reverse" : ""
                 }`}
               >
-                {/* Thumbnail */}
+               
                 <button
                   onClick={() => setSelectedVideo(chapter.video)}
                   className="group relative aspect-video w-full shrink-0 overflow-hidden rounded-lg md:w-1/2"
@@ -98,7 +98,7 @@ export default function Challenges() {
                   </div>
                 </button>
 
-                {/* Content */}
+               
                 <div
                   className={`flex w-full flex-col md:w-1/2 ${
                     reversed ? "md:items-end md:text-right" : "md:items-start md:text-left"
@@ -137,7 +137,7 @@ export default function Challenges() {
         </div>
       </div>
 
-      {/* Video Modal */}
+     
       {selectedVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
           <div className="relative w-full max-w-4xl">
