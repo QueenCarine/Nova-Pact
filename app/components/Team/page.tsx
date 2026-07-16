@@ -3,12 +3,12 @@ import Image from "next/image";
 const team = [
   {
     name: "Felicien Mukamarakiza",
-    role: "President",
+    role: "Team Lead",
     image:"/team/felicien.jpg",
   },
   {
     name: "ZamZam Sarah",
-    role: "Vice President",
+    role: "Business Development",
     image:"/team/zamzam.jpg",
   },
   {
@@ -18,17 +18,17 @@ const team = [
   },
   {
     name: "Gihozo Emeline",
-    role: "Coordinator",
+    role: "Operations Lead",
     image: "/team/emeline.jpg",
   },
   {
     name: "Queen Carine",
-    role: "Time Keeper",
+    role: "Software Engineer",
     image: "/team/queen.jpg",
   },
   {
     name: "Zima Yann",
-    role: "Operations",
+    role: "Growth/Marketing Lead",
     image: "/team/yann.jpg",
   },
 ];

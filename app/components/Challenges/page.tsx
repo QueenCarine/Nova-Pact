@@ -46,14 +46,6 @@ const chapters = [
     description: "Pitch stage where we define our mission and present our solution.",
     tag: "Pitch",
   },
-  {
-    number: "06",
-    name: "Your Digital Print",
-    image: "/home/home.jpg",
-    video: "https://www.youtube.com/embed/NI11jyLTpmo?autoplay=1",
-    description: "Final website bringing together all E-LAB challenges.",
-    tag: "Finale",
-  },
 ];
 
 export default function Challenges() {
@@ -62,7 +54,6 @@ export default function Challenges() {
   return (
     <section id="challenges" className="bg-blue-400 py-16 text-white">
       <div className="mx-auto max-w-5xl px-5">
-        {/* Header */}
         <div className="mb-12">
           <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white">
             E-LAB Series

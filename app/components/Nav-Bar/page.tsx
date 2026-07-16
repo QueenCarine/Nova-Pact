@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
+   { label: "Prototype", href: "#prototype" },
   { label: "Challenges", href: "#challenges" },
   { label: "The Team", href: "#team" },
 ];
@@ -60,7 +61,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-30 w-full bg-white/90 backdrop-blur-md border-b border-blue-100">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-        {/* Logo + Brand */}
+        
         <a
           href="#home"
           onClick={() => setActive("#home")}
@@ -79,7 +80,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop Navigation */}
+        
         <ul className="hidden items-center gap-3 lg:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
@@ -98,7 +99,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Button */}
+       
         <button
           className="text-blue-500 lg:hidden"
           onClick={() => setOpen((v) => !v)}
@@ -108,7 +109,7 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Navigation */}
+      
       {open && (
         <ul className="space-y-1 bg-white px-6 py-4 border-t border-blue-100 lg:hidden">
           {navLinks.map((link) => (
